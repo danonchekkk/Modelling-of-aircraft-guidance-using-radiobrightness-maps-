@@ -1,4 +1,6 @@
-#Моделирование радиояркостной карты
+"""
+настройки и объекты для генерации радиокарты
+"""
 import numpy as np
 import cv2
 
@@ -464,13 +466,13 @@ def generate_radiomap(size=(2000, 2000)):
 
     # природные объекты
     rmap = add_rivers(rmap, num_rivers=1)
-    rmap = add_lakes(rmap, num_lakes=2)
-    rmap = add_forests(rmap, num_forests=6)
+    rmap = add_lakes(rmap, num_lakes=3)
+    rmap = add_forests(rmap, num_forests=10)
     rmap = add_mountains(rmap, num_mountains=8)
     # антропогенные объекты
     rmap = add_roads(rmap, num_highways=2, num_local_roads=15)
-    rmap = add_buildings(rmap, num_buildings=50)
-    rmap = add_vehicles(rmap, num_vehicles=25)
+    rmap = add_buildings(rmap, num_buildings=80)
+    rmap = add_vehicles(rmap, num_vehicles=50)
 
     rmap = normalize_map(rmap)
     return rmap
