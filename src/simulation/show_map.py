@@ -2,8 +2,7 @@ from radiomap import generate_radiomap
 import matplotlib.pyplot as plt
 
 rmap = generate_radiomap((2000, 2000))
-x=5
-print(f'ingo: {x}')
+
 plt.figure(figsize=(8, 8))
 plt.imshow(rmap, cmap='gray')
 plt.colorbar(label='Radiobrightness')
